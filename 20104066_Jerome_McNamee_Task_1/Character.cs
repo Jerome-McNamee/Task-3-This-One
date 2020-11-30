@@ -102,10 +102,10 @@ namespace _20104066_Jerome_McNamee_Task_1
     public enum Movement
     {
         
-        UP,
-        DOWN,
-        LEFT,
-        RIGHT,
+        UP, //0
+        DOWN, //1
+        LEFT, //2
+        RIGHT, //3
         NO_MOVEMENT
 
     }

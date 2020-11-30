@@ -45,14 +45,14 @@ namespace _20104066_Jerome_McNamee_Task_1
         }
 
 
-        public Map(int minWidth, int maxWidth, int minHeight, int maxHeight, int numEnemies, int numItems)
+        public Map(int minWidth, int maxWidth, int minHeight, int maxHeight, int numEnemies, int numItems, int numWeapons)
         {
             width = random.Next(minWidth, maxWidth + 1);
             height = random.Next(minHeight, maxHeight + 1);
 
             map = new Tile[width, height];
             enemies = new Enemy[numEnemies];
-            items = new Item[numItems];
+            items = new Item[numItems + numWeapons];
             InitializeMap();
             hero = (Hero) Create(TileType.HERO);
 
@@ -61,10 +61,15 @@ namespace _20104066_Jerome_McNamee_Task_1
                 enemies[i] = (Enemy) Create(TileType.ENEMY);
             }
 
-            for (int i = 0; i < items.Length; i++)
+            for (int i = 0; i < numItems; i++)
             {
                 items[i] = (Item)Create(TileType.GOLD);
             }
+            for( int i = numItems; i < items.Length; i++)
+            {
+                items[i] = (Item)Create(TileType.WEAPON);
+            }
+
             UpdateVision();
         }
 
@@ -90,7 +95,7 @@ namespace _20104066_Jerome_McNamee_Task_1
         {
             int x = random.Next(0, width);
             int y = random.Next(0, height);
-            int i = random.Next(0, 2);
+            
 
             while(map[x, y].Type != TileType.EMPTY)
             {
@@ -105,20 +110,48 @@ namespace _20104066_Jerome_McNamee_Task_1
             }
             else if( type == TileType.ENEMY)
             {
+                int i = random.Next(0, 3);
                 if (i == 1)
                 {
                     map[x, y] = new Goblin(x, y);
                     return map[x, y];
                 }
-                else 
+                else if (i == 2)
                 {
                     map[x, y] = new Mage(x, y);
                     return map[x, y];
                 }
+                else
+                {
+                    Leader leader = new Leader(x, y);
+                    leader.Target = hero;
+                    map[x, y] = leader;
+                    return map[x, y];
+                }
+
             }
             else if(type == TileType.GOLD)
             {
                 map[x, y] = new Gold(x,y);
+                return map[x, y];
+            }
+
+            else if (type == TileType.WEAPON)
+            {
+                int weaponType = random.Next(0, 2);
+                int weaponVariant = random.Next(0, 2);
+
+                if ( weaponType == 0)
+                {
+                    RangedWeaponType rangedType = (RangedWeaponType)weaponVariant;
+                    map[x, y] = new RangedWeapon(rangedType, x, y);
+                }
+                else
+                {
+                    MeleeWeaponType meleeType = (MeleeWeaponType)weaponVariant;
+                    map[x, y] = new MeleeWeapon(meleeType, x, y);
+                }
+
                 return map[x, y];
             }
 
@@ -215,6 +248,10 @@ namespace _20104066_Jerome_McNamee_Task_1
                             {
                                 mapString += 'M';
                             }
+                            else if( enemy is Leader)
+                            {
+                                mapString += 'L';
+                            }
                         } 
                     }
                     else if (currentType == TileType.EMPTY)
@@ -233,6 +270,36 @@ namespace _20104066_Jerome_McNamee_Task_1
                         mapString += gold.GoldAmount; // Testing
                         
                     }
+                    else if (map[x, y].Type == TileType.WEAPON)
+                    {
+                        Weapon weapon = (Weapon)map[x, y];
+                        
+
+                        if (weapon is MeleeWeapon)
+                        {
+                            if (weapon.Name == "LongSword")
+                            {
+                                mapString += '/';
+                            }
+                            else
+                            {
+                                mapString += '|';
+                            }
+                        }
+
+                        else if (weapon is RangedWeapon)
+                        {
+                            if (weapon.Name == "Rifle")
+                            {
+                                mapString += 'R';
+                            }
+                            else
+                            {
+                                mapString += '}';
+                            }
+                        }
+                    }
+
                 }
                 mapString += "\n";
             }

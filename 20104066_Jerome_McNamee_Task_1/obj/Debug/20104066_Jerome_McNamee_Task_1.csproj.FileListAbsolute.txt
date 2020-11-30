@@ -28,3 +28,13 @@ C:\Users\mcnam\OneDrive\Documents\GitHub\Task-3\20104066_Jerome_McNamee_Task_1\o
 C:\Users\mcnam\OneDrive\Documents\GitHub\Task-3\20104066_Jerome_McNamee_Task_1\obj\Debug\20104066_Jerome_McNamee_Task_1.csproj.CoreCompileInputs.cache
 C:\Users\mcnam\OneDrive\Documents\GitHub\Task-3\20104066_Jerome_McNamee_Task_1\obj\Debug\20104066_Jerome_McNamee_Task_1.exe
 C:\Users\mcnam\OneDrive\Documents\GitHub\Task-3\20104066_Jerome_McNamee_Task_1\obj\Debug\20104066_Jerome_McNamee_Task_1.pdb
+C:\Users\mcnam\OneDrive\Documents\GitHub\Task-3\Task-3-\20104066_Jerome_McNamee_Task_1\obj\Debug\20104066_Jerome_McNamee_Task_1.csprojAssemblyReference.cache
+C:\Users\mcnam\OneDrive\Documents\GitHub\Task-3\Task-3-\20104066_Jerome_McNamee_Task_1\obj\Debug\_20104066_Jerome_McNamee_Task_1.frmGame.resources
+C:\Users\mcnam\OneDrive\Documents\GitHub\Task-3\Task-3-\20104066_Jerome_McNamee_Task_1\obj\Debug\_20104066_Jerome_McNamee_Task_1.Properties.Resources.resources
+C:\Users\mcnam\OneDrive\Documents\GitHub\Task-3\Task-3-\20104066_Jerome_McNamee_Task_1\obj\Debug\20104066_Jerome_McNamee_Task_1.csproj.GenerateResource.cache
+C:\Users\mcnam\OneDrive\Documents\GitHub\Task-3\Task-3-\20104066_Jerome_McNamee_Task_1\obj\Debug\20104066_Jerome_McNamee_Task_1.csproj.CoreCompileInputs.cache
+C:\Users\mcnam\OneDrive\Documents\GitHub\Task-3\Task-3-\20104066_Jerome_McNamee_Task_1\obj\Debug\20104066_Jerome_McNamee_Task_1.exe
+C:\Users\mcnam\OneDrive\Documents\GitHub\Task-3\Task-3-\20104066_Jerome_McNamee_Task_1\obj\Debug\20104066_Jerome_McNamee_Task_1.pdb
+C:\Users\mcnam\OneDrive\Documents\GitHub\Task-3\Task-3-\20104066_Jerome_McNamee_Task_1\bin\Debug\20104066_Jerome_McNamee_Task_1.exe.config
+C:\Users\mcnam\OneDrive\Documents\GitHub\Task-3\Task-3-\20104066_Jerome_McNamee_Task_1\bin\Debug\20104066_Jerome_McNamee_Task_1.exe
+C:\Users\mcnam\OneDrive\Documents\GitHub\Task-3\Task-3-\20104066_Jerome_McNamee_Task_1\bin\Debug\20104066_Jerome_McNamee_Task_1.pdb

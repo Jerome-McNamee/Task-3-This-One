@@ -48,6 +48,8 @@
   <ItemGroup>
     <Compile Include="Item.cs" />
     <Compile Include="Character.cs" />
+    <Compile Include="Leader.cs" />
+    <Compile Include="MeleeWeapon.cs" />
     <Compile Include="Obstacle.cs" />
     <Compile Include="EmptyTile.cs" />
     <Compile Include="Enemy.cs" />
@@ -65,7 +67,9 @@
     <Compile Include="Map.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RangedWeapon.cs" />
     <Compile Include="Tile.cs" />
+    <Compile Include="Weapon.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -25,7 +25,7 @@ namespace _20104066_Jerome_McNamee_Task_1
 
         public GameEngine()
         {
-            map = new Map(12, 24, 12, 24, 20, 12);
+            map = new Map(12, 24, 12, 24, 20, 12, 5);
         }
 
         

@@ -33,10 +33,11 @@ namespace _20104066_Jerome_McNamee_Task_1
             return name;
         }
 
-        public enum MeleeWeaponType
-        {
-            DAGGER,
-            LONGSWORD
-        }
+        
+    }
+    public enum MeleeWeaponType
+    {
+        DAGGER,
+        LONGSWORD
     }
 }
